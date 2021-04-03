@@ -1,0 +1,15 @@
+<?php
+
+function encryptPwd($claveNoEncriptada)
+{
+	return crypt($claveNoEncriptada);
+}
+
+function passwordsEquals($claveNoEncriptada,$claveEncriptada)
+{
+	echo "Verificacion de password";
+	$band = hash_equals($claveEncriptada, crypt($claveNoEncriptada,$claveEncriptada)); 
+	echo $band;
+	return $band;
+}
+
